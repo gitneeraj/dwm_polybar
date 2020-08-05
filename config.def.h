@@ -80,7 +80,7 @@ static const char *zoomcmd[]  		= { "zoom", NULL };
 static const char *pycharmcmd[]  	= { "pycharm", NULL };
 static const char *rangercmd[]  	= { "st", "-e", "ranger" };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "170x40", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
