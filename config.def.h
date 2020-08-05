@@ -79,6 +79,8 @@ static const char *vscodecmd[]  	= { "code", NULL };
 static const char *zoomcmd[]  		= { "zoom", NULL };
 static const char *pycharmcmd[]  	= { "pycharm", NULL };
 static const char *rangercmd[]  	= { "st", "-e", "ranger" };
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,6 +91,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_MonBrightnessDown, 	spawn, 			SHCMD("brightness_level -") },
 	{ MODKEY,                       XK_p,      					spawn,         	SHCMD("rofi -show drun -display-drun 'Search' -drun-display-format '{name}' -show-icons -theme 'Arc-Dark' -font 'Noto Sans 11'") },
 	{ MODKEY,             			XK_Return, 					spawn,         	{.v = termcmd } },
+	{ MODKEY,                       XK_grave,  					togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask,             XK_v,      					spawn,         	{.v = vscodecmd } },
 	{ MODKEY|ShiftMask,             XK_z,      					spawn,         	{.v = zoomcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      					spawn,         	{.v = pycharmcmd } },
@@ -100,7 +103,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
