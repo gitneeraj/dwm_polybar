@@ -39,7 +39,7 @@ static const Rule rules[] = {
 	/* class      				instance    title       tags mask     isfloating   monitor */
 	{ "Brave-browser",     		NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "firefox",  				NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "code-oss",  				NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "VSCodium",  				NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "jetbrains-pycharm-ce",  	NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "jetbrains-pycharm-ce",  	NULL,       "win0",     1 << 3,       1,           -1 },
 	{ "zoom",  					NULL,       NULL,       1 << 5,       1,           -1 },
