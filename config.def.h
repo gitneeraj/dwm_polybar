@@ -90,7 +90,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume, 	spawn, 			SHCMD("sound_volume +;") },
 	{ 0,                            XF86XK_MonBrightnessUp, 	spawn, 			SHCMD("brightness_level +") },
 	{ 0,                            XF86XK_MonBrightnessDown, 	spawn, 			SHCMD("brightness_level -") },
-	{ MODKEY,                       XK_p,      					spawn,         	SHCMD("rofi -show drun -display-drun 'Search' -drun-display-format '{name}' -show-icons -theme 'Arc-Dark' -font 'Noto Sans 11'") },
+	{ MODKEY,                       XK_p,      					spawn,         	SHCMD("rofi -show drun") },
 	{ MODKEY,             			XK_Return, 					spawn,         	{.v = termcmd } },
 	{ MODKEY,                       XK_grave,  					togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask,             XK_v,      					spawn,         	{.v = vscodecmd } },
