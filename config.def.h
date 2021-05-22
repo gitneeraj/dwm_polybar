@@ -43,7 +43,7 @@ static const Rule rules[] = {
 	{ "jetbrains-pycharm-ce",  	NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "jetbrains-pycharm-ce",  	NULL,       "win0",     1 << 3,       1,           -1 },
 	{ "zoom",  					NULL,       NULL,       1 << 5,       1,           -1 },
-	{ "St",  					NULL,       "ranger",   1 << 6,       0,           -1 },
+	{ "Alacritty",				NULL,       "ranger",   1 << 6,       0,           -1 },
 };
 
 /* layout(s) */
@@ -78,7 +78,7 @@ static const char *termcmd[]  		= { "alacritty", NULL };
 static const char *vscodecmd[]  	= { "vscodium", NULL };
 static const char *zoomcmd[]  		= { "zoom", NULL };
 static const char *pycharmcmd[]  	= { "pycharm", NULL };
-static const char *rangercmd[]  	= { "alacritty", "-e", "ranger" };
+static const char *rangercmd[]  	= { "alacritty", "-t", "ranger", "-e", "ranger", NULL };
 static const char scratchpadname[] 	= "scratchpad";
 static const char *scratchpadcmd[] 	= { "alacritty", "--title", scratchpadname, NULL };
 static const char *bravecmd[]  		= { "brave", NULL };
