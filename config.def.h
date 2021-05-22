@@ -74,13 +74,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] 		= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  		= { "st", NULL };
+static const char *termcmd[]  		= { "alacritty", NULL };
 static const char *vscodecmd[]  	= { "vscodium", NULL };
 static const char *zoomcmd[]  		= { "zoom", NULL };
 static const char *pycharmcmd[]  	= { "pycharm", NULL };
-static const char *rangercmd[]  	= { "st", "-e", "ranger" };
+static const char *rangercmd[]  	= { "alacritty", "-e", "ranger" };
 static const char scratchpadname[] 	= "scratchpad";
-static const char *scratchpadcmd[] 	= { "st", "-t", scratchpadname, "-g", "170x40", NULL };
+static const char *scratchpadcmd[] 	= { "alacritty", "--title", scratchpadname, NULL };
 static const char *bravecmd[]  		= { "brave", NULL };
 
 static Key keys[] = {
