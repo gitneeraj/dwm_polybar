@@ -80,7 +80,7 @@ static const char *zoomcmd[]  		= { "zoom", NULL };
 static const char *pycharmcmd[]  	= { "pycharm", NULL };
 static const char *rangercmd[]  	= { "alacritty", "-t", "ranger", "-e", "ranger", NULL };
 static const char scratchpadname[] 	= "scratchpad";
-static const char *scratchpadcmd[] 	= { "alacritty", "--title", scratchpadname, NULL };
+static const char *scratchpadcmd[] 	= { "alacritty", "-t", scratchpadname, "-o", "window.dimensions.columns=150", "-o", "window.dimensions.lines=30", NULL };
 static const char *bravecmd[]  		= { "brave", NULL };
 
 static Key keys[] = {
