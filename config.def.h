@@ -73,15 +73,16 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] 		= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  		= { "alacritty", NULL };
-static const char *vscodecmd[]  	= { "vscodium", NULL };
-static const char *zoomcmd[]  		= { "zoom", NULL };
-static const char *pycharmcmd[]  	= { "pycharm", NULL };
-static const char *rangercmd[]  	= { "alacritty", "-t", "ranger", "-e", "ranger", NULL };
+static const char *dmenucmd[] 			= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+static const char *termcmd[]  			= { "alacritty", NULL };
+static const char *vscodecmd[]  		= { "vscodium", NULL };
+static const char *zoomcmd[]  			= { "zoom", NULL };
+static const char *pycharmcmd[]  		= { "pycharm", NULL };
+static const char *rangercmd[]  		= { "alacritty", "-t", "ranger", "-e", "ranger", NULL };
 static const char scratchpadname[] 	= "scratchpad";
 static const char *scratchpadcmd[] 	= { "alacritty", "-t", scratchpadname, "-o", "window.dimensions.columns=150", "-o", "window.dimensions.lines=30", NULL };
-static const char *bravecmd[]  		= { "brave", NULL };
+static const char *nvimcmd[]  			= { "alacritty", "-t", "nvim", "-e", "nvim", NULL };
+static const char *bravecmd[]  			= { "brave", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -97,6 +98,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_z,      					spawn,         	{.v = zoomcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      					spawn,         	{.v = pycharmcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      					spawn,         	{.v = rangercmd } },
+	{ MODKEY|ShiftMask,             XK_n,      					spawn,         	{.v = nvimcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      					spawn,         	{.v = bravecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
