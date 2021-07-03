@@ -40,14 +40,15 @@ static const Rule rules[] = {
 	{ "Brave-browser",     		NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "firefox",  				NULL,       NULL,       1 << 0,       0,           -1 },
 	{ "VSCodium",  				NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "kitty",  				NULL,       "nvim",       1 << 2,       0,           -1 },
 	{ "jetbrains-pycharm-ce",  	NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "jetbrains-pycharm-ce",  	NULL,       "win0",     1 << 3,       1,           -1 },
 	{ "zoom",  					NULL,       NULL,       1 << 5,       1,           -1 },
-	{ "Alacritty",				NULL,       "ranger",   1 << 6,       0,           -1 },
+	{ "kitty",				NULL,       "ranger",   1 << 6,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -74,14 +75,14 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] 			= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  			= { "alacritty", NULL };
+static const char *termcmd[]  			= { "kitty", NULL };
 static const char *vscodecmd[]  		= { "vscodium", NULL };
 static const char *zoomcmd[]  			= { "zoom", NULL };
 static const char *pycharmcmd[]  		= { "pycharm", NULL };
-static const char *rangercmd[]  		= { "alacritty", "-t", "ranger", "-e", "ranger", NULL };
-static const char scratchpadname[] 	= "scratchpad";
-static const char *scratchpadcmd[] 	= { "alacritty", "-t", scratchpadname, "-o", "window.dimensions.columns=150", "-o", "window.dimensions.lines=30", NULL };
-static const char *nvimcmd[]  			= { "alacritty", "-t", "nvim", "-e", "nvim", NULL };
+static const char *rangercmd[]  		= { "kitty", "-T", "ranger", "-e", "ranger", NULL };
+static const char scratchpadname[] 	    = "scratchpad";
+static const char *scratchpadcmd[] 	    = { "kitty", "-T", scratchpadname, NULL };
+static const char *nvimcmd[]  			= { "kitty", "-T", "nvimeditor", "-e", "nvim", NULL };
 static const char *bravecmd[]  			= { "brave", NULL };
 
 static Key keys[] = {
